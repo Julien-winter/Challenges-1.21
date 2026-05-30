@@ -6,8 +6,7 @@ import net.anweisen.utilities.common.collection.WrappedException;
 import net.anweisen.utilities.common.config.Document;
 import net.codingarea.challenges.plugin.ChallengeAPI;
 import net.codingarea.challenges.plugin.Challenges;
-import net.codingarea.challenges.plugin.management.cloud.support.CloudNet2Support;
-import net.codingarea.challenges.plugin.management.cloud.support.CloudNet3Support;
+
 import net.codingarea.challenges.plugin.management.scheduler.task.TimerTask;
 import net.codingarea.challenges.plugin.management.scheduler.timer.TimerStatus;
 import org.bukkit.entity.Player;
@@ -63,12 +62,8 @@ public final class CloudSupportManager implements Listener {
 	private CloudSupport loadSupport(@Nonnull String name) {
 		switch (name) {
 			default:
+				Logger.warn("Cloud support type '{}' is not available", name);
 				return null;
-			case "cloudnet":
-			case "cloudnet3":
-				return new CloudNet3Support();
-			case "cloudnet2":
-				return new CloudNet2Support();
 		}
 	}
 

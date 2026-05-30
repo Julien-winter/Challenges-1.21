@@ -6,7 +6,7 @@ authors:
   - KxmischesDomi
 database: true
 website: coding-area.net
-api-version: 1.14
+api-version: 1.21
 main: net.codingarea.challenges.plugin.Challenges
 load: POSTWORLD
 softdepend:
@@ -17,7 +17,7 @@ description: |
 
 require:
   spigot: true
-  version: 1.14
+  version: 1.21
 
 commands:
   help:

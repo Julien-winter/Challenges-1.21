@@ -1,6 +1,5 @@
 package net.codingarea.challenges.plugin.challenges.implementation.challenge.world;
 
-import de.dytanic.cloudnet.driver.event.EventListener;
 import java.util.HashMap;
 import net.anweisen.utilities.common.collection.pair.Tuple;
 import net.codingarea.challenges.plugin.challenges.type.abstraction.SettingModifier;
@@ -87,7 +86,6 @@ public class ChunkDeletionChallenge extends SettingModifier {
     bossbar.update();
   }
 
-  @EventListener
   public void onPlayerMove(PlayerMoveEvent event) {
     if (event.getTo() == null || !checkIfAllowed(event.getPlayer())) {
       return;
